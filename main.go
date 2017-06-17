@@ -132,8 +132,7 @@ func main() {
 		default:
 			s = sql.jsonify()
 		}
-		fmt.Println(s)
 
-		io.Copy(f, bytes.NewBufferString(s))
+		io.Copy(f, bytes.NewBufferString(s+"\n"))
 	}
 }

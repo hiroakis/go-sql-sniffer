@@ -36,9 +36,7 @@ func (td *Tcpdump) TCPEach() chan []byte {
 	}
 
 	packetCh := make(chan []byte)
-	// cmd.Start()
-	// scanner := bufio.NewScanner(stdout)
-	// scanner.Split(splitTCPPacket)
+
 	go func() {
 		cmd.Start()
 		scanner := bufio.NewScanner(stdout)

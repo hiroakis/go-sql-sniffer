@@ -16,11 +16,6 @@ import (
 	"github.com/hiroakis/go-sql-sniffer/tcpdump"
 )
 
-func write(str string, f *os.File) {
-	buf := bytes.NewBufferString(str)
-	io.Copy(f, buf)
-}
-
 type SQLPacket struct {
 	UnixTime int64  `json:"unixtime"`
 	DateTime string `json:"datetime"`
